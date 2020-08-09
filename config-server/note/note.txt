@@ -1,20 +1,45 @@
 CHECK  URLS
 
-http://localhost:5000/guestservices/default
+// http://localhost:5000/guestservices/default
 
 {
-   "name":"guestservices",
-   "profiles":[
-      "default"
-   ],
-   "label":null,
-   "version":"59d1d9a28d4d9cc69b30c59ba569245a5bb9680e",
-   "state":null,
-   "propertySources":[
-
-   ]
+  "name": "guestservices",
+  "profiles": [
+    "default"
+  ],
+  "label": null,
+  "version": "b4be5c4eb4a7c353f1d3eb257935bf0cff39165c",
+  "state": null,
+  "propertySources": [
+    {
+      "name": "https://github.com/sezayirdagtekin/ms-config.git/guestservices.properties",
+      "source": {
+        "server.port": "9007"
+      }
+    }
+  ]
 }
 
+
+// http://localhost:5000/reservationservices/default
+
+{
+  "name": "reservationservices",
+  "profiles": [
+    "default"
+  ],
+  "label": null,
+  "version": "b4be5c4eb4a7c353f1d3eb257935bf0cff39165c",
+  "state": null,
+  "propertySources": [
+    {
+      "name": "https://github.com/sezayirdagtekin/ms-config.git/reservationservices.properties",
+      "source": {
+        "server.port": "9001"
+      }
+    }
+  ]
+}
 
  http://localhost:5000/roomservices/default
 
@@ -32,17 +57,22 @@ http://localhost:5000/guestservices/default
 }
 
 
- http://localhost:5000/reservationservices/default
+// http://localhost:5000/roomservices/default
 
 {
-  "name": "reservationservices",
+  "name": "roomservices",
   "profiles": [
     "default"
   ],
   "label": null,
-  "version": "59d1d9a28d4d9cc69b30c59ba569245a5bb9680e",
+  "version": "b4be5c4eb4a7c353f1d3eb257935bf0cff39165c",
   "state": null,
   "propertySources": [
-    
+    {
+      "name": "https://github.com/sezayirdagtekin/ms-config.git/roomservices.properties",
+      "source": {
+        "server.port": "9002"
+      }
+    }
   ]
 }
