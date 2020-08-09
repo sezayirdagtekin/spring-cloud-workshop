@@ -1,0 +1,48 @@
+CHECK  URLS
+
+http://localhost:5000/guestservices/default
+
+{
+   "name":"guestservices",
+   "profiles":[
+      "default"
+   ],
+   "label":null,
+   "version":"59d1d9a28d4d9cc69b30c59ba569245a5bb9680e",
+   "state":null,
+   "propertySources":[
+
+   ]
+}
+
+
+ http://localhost:5000/roomservices/default
+
+{
+  "name": "roomservices",
+  "profiles": [
+    "default"
+  ],
+  "label": null,
+  "version": "59d1d9a28d4d9cc69b30c59ba569245a5bb9680e",
+  "state": null,
+  "propertySources": [
+    
+  ]
+}
+
+
+ http://localhost:5000/reservationservices/default
+
+{
+  "name": "reservationservices",
+  "profiles": [
+    "default"
+  ],
+  "label": null,
+  "version": "59d1d9a28d4d9cc69b30c59ba569245a5bb9680e",
+  "state": null,
+  "propertySources": [
+    
+  ]
+}
