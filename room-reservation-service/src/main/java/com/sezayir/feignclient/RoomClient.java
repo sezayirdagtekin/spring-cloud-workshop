@@ -15,6 +15,6 @@ public interface RoomClient {
 	List<Room> getAllRooms();
 	
 	@GetMapping("/room/{id}")
-	List<Room> getAllRoom(@PathVariable("id")  long id);
+	Room findById(@PathVariable("id")  long id);
 
 }

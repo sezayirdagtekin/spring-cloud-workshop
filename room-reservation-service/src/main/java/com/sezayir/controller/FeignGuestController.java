@@ -1,34 +1,35 @@
 package com.sezayir.controller;
 
 import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.sezayir.feignclient.GuestClient;
 import com.sezayir.model.Guest;
-import com.sezayir.service.GuestService;
 
 @RestController
-@RequestMapping("/guest")
-public class GuestController {
+@RequestMapping("feinguest")
+public class FeignGuestController {
 
-	@Autowired
-	private GuestService service;
+	public final GuestClient client;
+
+	public FeignGuestController(GuestClient client) {
+		super();
+		this.client = client;
+	}
 
 	@GetMapping("/all")
 	public Iterable<Guest> getAllGuests() {
 
-		return service.getAllGuests();
+		return client.getAllGuests();
 
 	}
 
 	@GetMapping("/{id}")
-	public Optional<Guest> getGuest(@PathVariable("id") Long id) {
+	public Guest getGuest(@PathVariable("id") Long id) {
 
-		return service.getById(id);
+		return client.getById(id);
 	}
 
 }
